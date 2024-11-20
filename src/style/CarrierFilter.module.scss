@@ -1,0 +1,99 @@
+.carrierFilterWrap {
+    background-color: #E8EBF2;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .carrierFilterTitle {
+        color: #4E148C;
+    }
+    .carriersDiv {
+        color: #858AE3;
+        padding: 0 0 0 10px;
+
+        .checkboxLabel {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            
+            @media (max-width: 400px) {
+                font-size: 12px;
+                gap: 7px;
+            }
+            input[type="checkbox"] {
+                display: none;
+        
+                &:checked + .checkboxCustom::after {
+                    display: block; 
+                }
+            }
+        
+            .checkboxCustom {
+                width: 21px;
+                height: 21px;
+                border: 1px solid #4E148C;
+                border-radius: 50%; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                background-color: transparent;
+                transition: background-color 0.2s, border-color 0.2s;
+        
+                &::after {
+                    content: ''; 
+                    width: 15px;
+                    height: 15px;
+                    background-color: #4E148C;
+                    border-radius: 50%; 
+                    display: none; 
+                    position: absolute;
+                    top: 2.5px;
+
+                }
+
+                @media (max-width: 400px)  {
+                    width: 16px;
+                    height: 16px;
+                    &::after {
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+            }
+        
+            &:hover .checkboxCustom {
+                border-width: 2px;
+                background-color: #4E148C;
+            }
+        }
+
+
+    }
+
+    @media (max-width: 767px)  {
+        background-color: transparent;
+        color: #F7F9F7;
+        .carrierFilterTitle {
+            color: #F7F9F7;
+        }
+        .carriersDiv {
+            color: #F7F9F7; 
+ 
+            .checkboxLabel {
+                .checkboxCustom {
+                    border: 1px solid #F7F9F7;
+            
+                    &::after {
+                    background-color: #F7F9F7; 
+                    }
+                }
+            }
+        }
+    }
+
+}

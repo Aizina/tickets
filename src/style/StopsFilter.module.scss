@@ -1,0 +1,97 @@
+.stopsFilterWrap {
+    background-color: #E8EBF2;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .stopsFilterTitle {
+        color: #4E148C;
+    }
+    .stopsDiv {
+        color: #858AE3;
+        padding: 0 0 0 10px;
+
+
+        .checkboxLabel {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            @media (max-width: 400px) {
+                font-size: 12px;
+                gap: 7px;
+            }
+        
+            input[type="checkbox"] {
+                display: none;
+        
+                &:checked + .checkboxCustom::after {
+                    display: block; 
+                }
+            }
+        
+            .checkboxCustom {
+                width: 20px;
+                height: 20px;
+                border: 1px solid #4E148C;
+                border-radius: 4px; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                background-color: transparent;
+                transition: background-color 0.2s, border-color 0.2s;
+        
+                &::after {
+                    content: '✔'; 
+                    font-size: 14px; 
+                    font-weight: 700;
+                    color: #4E148C; 
+                    display: none;
+                    position: absolute;
+                }
+
+                @media (max-width: 400px) {
+                    width: 14px;
+                    height: 14px;
+                    &::after {
+                        font-size: 10px; 
+                    }
+                }
+            }
+        
+            &:hover .checkboxCustom {
+                border-width: 2px;
+            }
+        }
+        
+        
+    }
+
+    @media (max-width: 767px)  {
+        background-color: transparent;
+        color: #F7F9F7;
+        .stopsFilterTitle {
+            color: #F7F9F7;
+        }
+        .stopsDiv {
+            color: #F7F9F7; 
+ 
+            .checkboxLabel {
+                .checkboxCustom {
+                    border: 1px solid #F7F9F7;
+            
+                    &::after {
+                    color: #F7F9F7; 
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}

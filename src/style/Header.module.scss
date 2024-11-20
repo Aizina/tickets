@@ -1,0 +1,19 @@
+.headerWrapper {
+    color: #4E148C;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+
+    .headerIcon {
+        width: 80px;
+    }
+    @media (max-width: 768px) {
+        justify-content: center;
+
+        h2  {
+            display: none;
+        }
+    }
+}

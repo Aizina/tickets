@@ -1,0 +1,85 @@
+.filtersWrap {
+    display: flex;
+    flex: 1;
+
+    .filtersDescriptionWrap {
+        display: none;
+    }
+
+    .filtersContent {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        flex-flow: column-reverse;
+        
+
+    }
+ 
+    @media (max-width: 767px) {
+        flex-direction: column;
+
+        .filtersContent {
+          display: none; 
+          background-color: #4E148C;
+          flex-direction: row;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+
+          @media (max-width: 408px) {
+            flex-direction: column;
+            gap: 15px;
+          }
+        }
+      
+        .showOnSmallScreens {
+          display: flex; 
+        }
+      
+        .hideOnSmallScreens {
+          display: none; 
+        }
+      
+        .filtersDescriptionWrap {
+          display: flex;
+          flex: 1;
+          flex-direction: row;
+          gap: 15px;
+          background-color: #4E148C;
+          align-items: center;
+          justify-content:space-between;
+          color: white;
+          font-weight: 500;
+          border-radius: 10px;
+          padding: 15px;
+          font-size: 14px;
+          @media (max-width: 450px) {
+            font-size: 10px;
+          }
+
+          .filtersSettings {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: end;
+            gap: 10px;
+            font-size: 12px;
+            span {
+              text-align: end;
+              @media (max-width: 540px) {
+                display: none;
+              }
+            }
+            img {
+              width: 15px;
+            }
+          }
+        }
+
+        .changeBorder {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+  }
+}
+
+

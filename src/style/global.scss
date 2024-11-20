@@ -1,0 +1,11 @@
+@font-face {
+    font-family: Inter;
+    src: url(/public/fonts/Inter/static/Inter_18pt-Medium.ttf);
+    font-weight: normal;
+}
+
+*, body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+}

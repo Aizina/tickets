@@ -1,0 +1,33 @@
+.eachStyleWrapper{
+    background-color: #E8EBF2;
+    display: flex;
+    flex-direction: column;
+    color: #4E148C;
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin: 20px 0; 
+    gap: 20px;
+
+    .mainInfoWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        img {
+            max-height: 50px;
+        }
+
+        .eachInfoDiv {
+            display: flex;
+            flex-direction: column;
+            .eachInfoHeaders {
+                color: #858AE3;
+                margin: 0;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        font-size: 12px;
+    }
+}
