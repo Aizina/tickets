@@ -41,8 +41,8 @@ export const TicketsComponent: React.FC = () => {
                 case SortType.FASTEST:
                     return a.legs[0].durationInMinutes - b.legs[0].durationInMinutes;
                 case SortType.OPTIMAL:
-                    const aScore = a.price.raw + a.legs[0].stopCount * 100;
-                    const bScore = b.price.raw + b.legs[0].stopCount * 100;
+                    const aScore = a.price.raw / a.legs[0].durationInMinutes;
+                    const bScore = b.price.raw / b.legs[0].durationInMinutes;
                     return aScore - bScore;
                 default:
                     return 0;
