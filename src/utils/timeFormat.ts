@@ -10,3 +10,7 @@ export const formatMinutesToHoursAndMinutes = (totalMinutes: number): string => 
     const minutes = totalMinutes % 60;
     return `${hours}ч ${minutes}мин`;
 }
+
+export const formatPrice = (price: number) => {
+    return (Intl.NumberFormat('ru-RU').format(Math.round(price))); 
+  };
